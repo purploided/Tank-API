@@ -1,4 +1,4 @@
-// tankapi source
+// tankapi source code
 
 function tankAPI() { // tankapi
     tank1 = document.createElement("img");
