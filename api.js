@@ -4,7 +4,7 @@ function tankAPI() { // tankapi
     tank1 = document.createElement("img");
     tank1.src = "https://cdn.discordapp.com/attachments/984720122180694066/985029929580232743/tank.png";
     
-    var body = document.getElementById("body");
+    var body = document.getElementsByTagName("body")[0];
 
     tank2 = document.createElement("img");
     tank2.src = "https://cdn.discordapp.com/attachments/984720122180694066/985030797658578964/tank1.png"; 
@@ -41,7 +41,7 @@ function tankAPI() { // tankapi
 
     num = Math.floor(Math.random() * 8); // random number gen
 
-    button = document.getElementById("tankapibutton");
+    button = document.getElementById("INSERTBUTTONNAMEHERE");
 
     button.disabled = true;
 
