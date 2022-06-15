@@ -1,4 +1,4 @@
-// tankapi source code
+// tankapi source
 
 function tankAPI() { // tankapi
     tank1 = document.createElement("img");
@@ -26,6 +26,12 @@ function tankAPI() { // tankapi
 
     tank8 = document.createElement("img");
     tank8.src = "https://cdn.discordapp.com/attachments/984720160122368020/985034506153123840/tank7.png"; 
+    
+    tank9 = document.createElement("img");
+    tank9.src = "https://cdn.discordapp.com/attachments/986513318497890344/986519986254274580/tank8.png"; 
+
+    tank10 = document.createElement("img");
+    tank10.src = "https://cdn.discordapp.com/attachments/986513318497890344/986520029082292294/tank9.png"; 
 
     // found legendary tank?
 
@@ -39,9 +45,9 @@ function tankAPI() { // tankapi
 
     legendaryFound.src = "https://cdn.discordapp.com/attachments/984720160122368020/985072665154965534/foundlegendary.png";
 
-    num = Math.floor(Math.random() * 8); // random number gen
+    num = Math.floor(Math.random() * 10); // random number gen
 
-    button = document.getElementById("INSERTBUTTONNAMEHERE");
+    button = document.getElementById("YOURBUTTONNAMEHERE");
 
     button.disabled = true;
 
@@ -83,6 +89,14 @@ function tankAPI() { // tankapi
 
             setTimeout(() => { legendaryFound.style.top = "1%"; }, 0);
             setTimeout(() => { legendaryFound.style.top = "-50%"; }, 1000);
+            break;
+        case 8:
+            body.appendChild(tank9);
+            localStorage.setItem('Gold Tank 1', tank9);
+            break;
+        case 9:
+            body.appendChild(tank10);
+            localStorage.setItem('Gold Tank 2', tank10);
             break;
     }
 }
