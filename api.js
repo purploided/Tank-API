@@ -1,5 +1,76 @@
 // tankapi source
 
+// accessing your saved tanks
+
+function importTanksFromLocalStorage(tankName) {
+
+    var body = document.getElementsByTagName("body")[0];
+
+    if (tankName == "Common Tank 1") {
+        cmn1 = localStorage.getItem('Common Tank 1');
+        cmn1e = document.createElement("img");
+        cmn1e.src = cmn1; 
+        body.appendChild(cmn1e);
+    }
+    else if (tankName == "Common Tank 2") {
+        cmn2 = localStorage.getItem('Common Tank 2');
+        cmn2e = document.createElement("img");
+        cmn2e.src = cmn2; 
+        body.appendChild(cmn2e);
+    }
+    else if (tankName == "Common Tank 3") {
+        cmn3 = localStorage.getItem('Common Tank 3');
+        cmn3e = document.createElement("img");
+        cmn3e.src = cmn3; 
+        body.appendChild(cmn3e);
+    }
+    else if (tankName == "Common Tank 4") {
+        cmn4 = localStorage.getItem('Common Tank 4');
+        cmn4e = document.createElement("img");
+        cmn4e.src = cmn4; 
+        body.appendChild(cmn4e);
+    }
+    else if (tankName == "Rare Tank 1") {
+        rar1 = localStorage.getItem('Rare Tank 1');
+        rar1e = document.createElement("img");
+        rar1e.src = rar1; 
+        body.appendChild(rar1e);
+    }
+    else if (tankName == "Rare Tank 2") {
+        rar2 = localStorage.getItem('Rare Tank 2');
+        rar2e = document.createElement("img");
+        rar2e.src = rar2; 
+        body.appendChild(rar2e);
+    }
+    else if (tankName == "Rare Tank 3") {
+        rar3 = localStorage.getItem('Rare Tank 3');
+        rar3e = document.createElement("img");
+        rar3e.src = rar3; 
+        body.appendChild(rar3e);
+    }
+    else if (tankName == "Gold Tank 1") {
+        gld1 = localStorage.getItem('Gold Tank 1');
+        gld1e = document.createElement("img");
+        gld1e.src = gld1; 
+        body.appendChild(gld1e);
+    }
+    else if (tankName == "Gold Tank 2") {
+        gld2 = localStorage.getItem('Gold Tank 2');
+        gld2e = document.createElement("img");
+        gld2e.src = gld2; 
+        body.appendChild(gld2e);
+    }
+    else if (tankName == "Legendary Tank") {
+        lgn = localStorage.getItem('Legendary Tank');
+        lgne = document.createElement("img");
+        lgne.src = lgn; 
+        body.appendChild(lgne);
+    }
+    else if (tankName) {
+        console.error("Could not find tank and/or you do not have this tank.");
+    }
+}
+
 function tankAPI() { // tankapi
     tank1 = document.createElement("img");
     tank1.src = "https://cdn.discordapp.com/attachments/984720122180694066/985029929580232743/tank.png";
@@ -47,7 +118,7 @@ function tankAPI() { // tankapi
 
     num = Math.floor(Math.random() * 10); // random number gen
 
-    button = document.getElementById("YOURBUTTONNAMEHERE");
+    button = document.getElementById("YOURBUTTONHERE");
 
     button.disabled = true;
 
@@ -56,35 +127,35 @@ function tankAPI() { // tankapi
     switch (num) {
         case 0:
             body.appendChild(tank1);
-            localStorage.setItem('Common Tank 1', tank1);
+            localStorage.setItem('Common Tank 1', tank1.src);
             break;
         case 1:
             body.appendChild(tank2);
-            localStorage.setItem('Common Tank 2', tank2);
+            localStorage.setItem('Common Tank 2', tank2.src);
             break;
         case 2:
             body.appendChild(tank3);
-            localStorage.setItem('Common Tank 3', tank3);
+            localStorage.setItem('Common Tank 3', tank3.src);
             break;
         case 3:
             body.appendChild(tank4);
-            localStorage.setItem('Common Tank 4', tank4);
+            localStorage.setItem('Common Tank 4', tank4.src);
             break;
         case 4:
             body.appendChild(tank5);
-            localStorage.setItem('Rare Tank 1', tank5);
+            localStorage.setItem('Rare Tank 1', tank5.src);
             break;
         case 5:
             body.appendChild(tank6);
-            localStorage.setItem('Rare Tank 2', tank6);
+            localStorage.setItem('Rare Tank 2', tank6.src);
             break;
         case 6:
             body.appendChild(tank7);
-            localStorage.setItem('Rare Tank 3', tank7);
+            localStorage.setItem('Rare Tank 3', tank7.src);
             break;
         case 7:
             body.appendChild(tank8);
-            localStorage.setItem('Legendary Tank', tank8);
+            localStorage.setItem('Legendary Tank', tank8.src);
             body.appendChild(legendaryFound);
 
             setTimeout(() => { legendaryFound.style.top = "1%"; }, 0);
@@ -92,11 +163,11 @@ function tankAPI() { // tankapi
             break;
         case 8:
             body.appendChild(tank9);
-            localStorage.setItem('Gold Tank 1', tank9);
+            localStorage.setItem('Gold Tank 1', tank9.src);
             break;
         case 9:
             body.appendChild(tank10);
-            localStorage.setItem('Gold Tank 2', tank10);
+            localStorage.setItem('Gold Tank 2', tank10.src);
             break;
     }
 }
