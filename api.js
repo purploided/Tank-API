@@ -71,6 +71,41 @@ function importTanksFromLocalStorage(tankName) {
     }
 }
 
+let button = document.getElementById("YOURBUTTONHERE");
+
+/*
+    Speedrun Timer
+
+    THIS TOOK ME WAYY TOO LONG!!!!
+*/
+
+
+const stopwatchBtn = document.createElement("button");
+stopwatchBtn.innerText = ("Click Here to start the Speedrun Timer!");
+body.appendChild(stopwatchBtn);
+setTimeout(() => {stopwatchBtn.style.display = "none";}, 3000);
+
+let count = 0;
+let clickedB = false;
+
+stopwatchBtn.addEventListener("click", function() {
+    clickedB = true;
+    stopwatch = setInterval(() => {
+        count++;
+        button.innerText = ("Speedrun Timer: " + count + " Click Here!");
+    }, 1000);
+
+    stopwatchBtn.style.display = "none";
+})
+
+button.addEventListener("click", function() {
+    stopwatchBtn.style.display = "none";
+});
+
+/*
+    Tank API (actual code)
+*/
+
 function tankAPI() { // tankapi
     tank1 = document.createElement("img");
     tank1.src = "https://cdn.discordapp.com/attachments/984720122180694066/985029929580232743/tank.png";
@@ -116,13 +151,19 @@ function tankAPI() { // tankapi
 
     legendaryFound.src = "https://cdn.discordapp.com/attachments/984720160122368020/985072665154965534/foundlegendary.png";
 
-    num = Math.floor(Math.random() * 10); // random number gen
-
-    button = document.getElementById("YOURBUTTONHERE");
-
     button.disabled = true;
 
     setTimeout(() => { button.disabled = false; }, 2000); // hide button
+
+    let num = Math.floor(Math.random() * 10); // random number gen
+
+    if (clickedB == true) {
+        if (num == 7) {
+            clearInterval(stopwatch);
+            console.log("Your time was " + count + " seconds!");
+            button.innerText = ("Grab a Random Tank!");
+        }
+    }
 
     switch (num) {
         case 0:
