@@ -12,14 +12,27 @@
 
 # How to use this API
 
+```
+                                        ################## OUTDATED ##################
+
+
 To use this api, put the JavaScript from the ``api.js`` file into another JavaScript file, or paste the api.js file into your website.
 Then declare the file within your HTML file with the following code:
 
-```html
+
 <script src="api.js"></script>
-```
+
 
 You can then choose whatever input you would like to then run the API, e.g. a Button or a Text Input.
+```
+
+### As of Update 0.3.1, the above codeblock does not work anymore. Here is what you should do now:
+
+1. If you are using the outdated version, please DELETE your api.js file
+2. Head to your HTML and replace the ```<script src="api.js"></script>``` with ```<script src="https://cdn.githubraw.com/NicohIas/Tank-API/main/main.js"></script>```
+3. DON'T CHANGE ANYTHING ELSE
+
+Have fun with the new update!
 
 # How it works (sorta)
 
