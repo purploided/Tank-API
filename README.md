@@ -13,7 +13,7 @@
 # How to use this API
 
 ```
-                               ################## OUTDATED ##################
+                          ################## OUTDATED ##################
 
 
 To use this api, put the JavaScript from the ``api.js`` file into another JavaScript file, or paste the api.js file into your website.
