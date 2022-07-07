@@ -71,7 +71,7 @@ function importTanksFromLocalStorage(tankName) {
     }
 }
 
-let button = document.getElementById("YOURBUTTONHERE");
+let button = document.querySelector('button');
 
 /*
     Speedrun Timer
