@@ -29,7 +29,7 @@ You can then choose whatever input you would like to then run the API, e.g. a Bu
 ### As of Update 0.3.1, the above codeblock does not work anymore. Here is what you should do now:
 
 1. If you are using the outdated version, please DELETE your api.js file
-2. Head to your HTML and replace the ```<script src="api.js"></script>``` with ```<script src="https://cdn.githubraw.com/NicohIas/Tank-API/main/tankapi.js"></script>```
+2. Head to your HTML and replace the ```<script src="api.js"></script>``` with ```<script src="https://cdn.githubraw.com/NicohIas/Tank-API/main/maintank.js"></script>```
 3. DON'T CHANGE ANYTHING ELSE
 
 Have fun with the new update!
