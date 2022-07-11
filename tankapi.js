@@ -169,7 +169,7 @@ function tankAPI() { // tankapi
 
     legendaryFound.src = "https://cdn.discordapp.com/attachments/984720160122368020/985072665154965534/foundlegendary.png";
 
-    button.disabled = false;
+    button.disabled = true;
 
     setTimeout(() => { button.disabled = false; }, 2000); // hide button
 
